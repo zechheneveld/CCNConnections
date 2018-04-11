@@ -266,12 +266,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523306120967</updated>
-      <workItem from="1523306122314" duration="19982000" />
+      <workItem from="1523306122314" duration="21100000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19982000" />
+    <option name="totallyTimeSpent" value="21100000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -284,9 +284,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="15" y="23" width="1260" height="675" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24939467" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24939467" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32871974" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -295,7 +294,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info id="npm" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32871974" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32871974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
