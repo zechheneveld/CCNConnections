@@ -3,6 +3,12 @@ body {
   padding-bottom: 20px;
 }
 
+p {
+  text-align: center;
+  font-family: Palatino;
+  color: rgb(0, 86, 149);
+}
+
 .background {
   background-repeat: no-repeat;
   z-index: -1000;
@@ -113,4 +119,62 @@ li a:hover {
 
 footer{
   margin-top:40px;
+}
+
+.submitButton {
+  margin: 0 auto;
+  width: 15%;
+}
+
+.button26 {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.5);
+  overflow: hidden;
+  width: 100%;
+  background-color: #4cae4c;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+.button26 a{
+  color: rgba(51,51,51,1);
+  text-decoration: none;
+  display: block;
+}
+.button26::before, .button26::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 1;
+  -webkit-transform: translate(-13%,-190%) rotate(-30deg);
+  transform: translate(-13%,-190%) rotate(-30deg);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(255,255,255,1);
+  background-color: rgba(255,255,255,0.25);
+}
+.button26::after{
+  -webkit-transition-delay: 0.2s; /* Safari */
+  transition-delay: 0.2s;
+}
+.button26:hover::before, .button26:hover::after{
+  opacity: 0;
+  -webkit-transform: translate(0,0);
+  transform: translate(0,0);
 }
