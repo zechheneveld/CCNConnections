@@ -1,0 +1,56 @@
+
+<img class="preload-me" src="https://www.childrenscancernetwork.org/wp-content/uploads/2015/08/logo.png" width="248" height="90"/>
+<p class="msgCenter">Message Center</p>
+
+<form action="/action_page.php">
+    <div class="container">
+
+        <div class="row">
+            <div class="header">
+                <button id = "addCon" class="btn btn-primary">Add Contact</button>
+            </div>
+        </div>
+
+        <div class="container tagGroup">
+            <div class="col-25">
+                <label for="tagId">Group:</label>
+            </div>
+            <div class="col-25">
+                <input type="text" id = "tagId" placeholder="Enter Tag"/>
+            </div>
+            <div class="col-25">
+                <label for="grpSel">Groups Selected:</label>
+            </div>
+            <div class="col-25">
+                <textarea id="grpSel" rows="8" cols="25" name="groups" >Lists of Groups Selected</textarea>
+            </div>
+
+        </div>
+
+
+
+        <div class="container row">
+            <div class="col-20">
+                <label for="txtMsg">Message:</label>
+            </div>
+            <div class="col-80">
+                <textarea id="txtMsg" rows="8" cols="50" name="comment" >Type Text Message Here</textarea>
+            </div>
+        </div>
+
+        <div class="buttons">
+        <span id="textButtons">
+            <button id = "cnlTxt" class="btn btn-warning">Cancel</button>
+            <button id = "subTxt" class="btn btn-primary">Submit</button>
+        </span>
+        </div>
+        <div>
+            <button id = "logOut" class="btn btn-secondary">Log Out</button>
+        </div>
+
+    </div>
+
+
+</form>
+
+
