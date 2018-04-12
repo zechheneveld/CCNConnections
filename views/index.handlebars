@@ -1,34 +1,41 @@
  <h2 class="page-header">Dashboard</h2>
+ {{#if success_msg}}
+     <div class="alert alert-success">{{success_msg}}</div>
+ {{/if}}
 <p>Welcome to your dashboard</p>
 
- <input type="text" id="phoneNumber" placeholder="######">
- <button class="btn-warning">Cancel</button>
- <button class="btn-success">Submit</button>
- <div class="dropdown">
-     <button onclick="myFunction()" class="dropbtn">Add Contact</button>
-     <div id="myDropdown" class="dropdown-content">
-
+ <div class="container">
+      <div class="dropdown">
+         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Add Contact
+             <span class="caret"></span></button>
+         <ul class="dropdown-menu">
+             <input type="text" placeholder="Enter Number">
+             <button id="btnCancel" class="btn btn-warning" data-toggle="modal" data-target="#myModal">Cancel</button>
+             <button id="btnAdd" class="btn btn-success">Add</button>
+         </ul>
      </div>
  </div>
+ <!-- The Modal -->
+ <div class="modal fade" id="myModal">
+     <div class="modal-dialog">
+         <div class="modal-content">
 
- <script>
+             <!-- Modal Header -->
+             <div class="modal-header">
+                 <h4 class="modal-title">Are you sure you want to Cancel?</h4>
+                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+             </div>
 
-     function myFunction() {
-         document.getElementById("myDropdown").classList.toggle("show");
-     }
+             <!-- Modal body -->
+             <div class="modal-body">
+                 Press X to Close This Box
+             </div>
 
-     // Close the dropdown menu if the user clicks outside of it
-     window.onclick = function(event) {
-         if (!event.target.matches('.dropbtn')) {
-
-             var dropdowns = document.getElementsByClassName("dropdown-content");
-             var i;
-             for (i = 0; i < dropdowns.length; i++) {
-                 var openDropdown = dropdowns[i];
-                 if (openDropdown.classList.contains('show')) {
-                     openDropdown.classList.remove('show');
-                 }
-             }
-         }
-     }
- </script>
+             <!-- Modal footer -->
+             <div class="modal-footer">
+                 <button type="button" class="btn btn-warning" data-dismiss="modal">Go Back</button>
+                 <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+             </div>
+         </div>
+     </div>
+ </div>

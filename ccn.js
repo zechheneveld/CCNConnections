@@ -13,13 +13,21 @@ const twilio = require('twilio')(
 );
 const body = 'Welcome to CCN Connections';
 
+$(document).ready(function () {
+    $("#addNumber").on("click", function () {
+        console.log("clicked")
+    });
+
+});
+
+   function addContact(){
+       addedNumbers.push($("#phoneNumber").val());
+       console.log(addedNumbers[i]);
+   }
 
 
-    addedNumbers.push($("#phoneNumber").val());
-    console.log(addedNumbers);
 
-
-const numbers = addedNumbers;
+const numbers = addedNumbers[i];
 
     // ['15189323461', '16027906734', '17143922107', '15309493838'];
 
