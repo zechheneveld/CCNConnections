@@ -16,11 +16,11 @@
         <nav>
           <ul class="nav nav-pills pull-right">
             {{#if user}}
-              <li role="presentation"><a href="/">Dashboard</a></li>
-              <li role="presentation"><a href="/users/logout">Logout</a></li>
+              <li role="presentation"><a href="/">Home</a></li>
+                <li id="register" role="presentation"><a href="/users/register">Add User</a></li>
+                <li role="presentation"><a href="/users/logout">Logout</a></li>
             {{else}}
               <li id="login" role="presentation"><a href="/users/login">Login</a></li>
-              <li id="register" role="presentation"><a href="/users/register">Register</a></li>
             {{/if}}
           </ul>
         </nav>
