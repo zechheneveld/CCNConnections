@@ -5,7 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -22,11 +23,13 @@
                 <li id="register" role="presentation"><a href="/users/register">Add User</a></li>
               <li role="presentation"><a href="/users/logout">Logout</a></li>
             {{else}}
-              <li id="login" role="presentation"><a href="/users/login">Login</a></li>
             {{/if}}
           </ul>
         </nav>
           <img class="logo" src="http://localhost:3000/images/logo.png" alt="My_Logo">
+            {{#if user}}
+        <h2 class="page-header">CCN Connections Dashboard</h2>
+            {{/if}}
       </div>
 
       <div class="row">

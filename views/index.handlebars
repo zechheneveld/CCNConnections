@@ -1,7 +1,16 @@
 
- <h2 class="page-header">CCN Connections Dashboard</h2>
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Add Contact
+        <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+        <input type="text" placeholder="Enter Number">
+        <p></p>
+        <button id="btnCancel" class="btn btn-warning" data-toggle="modal" data-target="#myModal">Cancel</button>
+        <button id="btnAdd" class="btn btn-success">Add</button>
+    </ul>
+</div>
 
- <button id = "addCon" class="btn btn-primary">Add Contact</button>
+
              <div class="col-25">
                  <label for="tagId">Group:</label>
              </div>
@@ -26,6 +35,26 @@
             <div class="submitButton">
                 <button type="submit" class="sim-button button26"><span>Submit</span></button>
             </div>
-         <div>
-             <button id = "logOut" class="btn btn-secondary">Log Out</button>
-         </div>
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Are you sure you want to Cancel?</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                Press X to Close This Box
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Go Back</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
