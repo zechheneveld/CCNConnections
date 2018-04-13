@@ -14,8 +14,10 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/loginapp');
 var db = mongoose.connection;
 
+// var client = require('./public/js/client');
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var ccn = require('./routes/ccn');
 
 // Init App
 var app = express();
@@ -75,9 +77,11 @@ app.use(function (req, res, next) {
 });
 
 
-
-app.use('/', routes);
 app.use('/users', users);
+// app.use('/client', client);
+app.use('/ccn', ccn);
+app.use('/', routes);
+
 
 // Set Port
 app.set('port', (process.env.PORT || 3000));
@@ -86,5 +90,5 @@ app.listen(app.get('port'), function(){
     console.log('Server started on port '+app.get('port'));
 });
 
-
+module.exports = app;
 

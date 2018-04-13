@@ -1,18 +1,20 @@
- <h2 class="page-header">Dashboard</h2>
+ <h2 class="page-header">Home Page</h2>
 
-<p>Welcome to your dashboard</p>
 
- <div class="container">
-      <div class="dropdown">
+ <!--<form id="twilioForm" role="form" method="POST" action="/twilio/messages">-->
+     <div class="dropdown">
          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Add Contact
              <span class="caret"></span></button>
          <ul class="dropdown-menu">
-             <input type="text" placeholder="Enter Number">
+             <input id="txtClient1" type="text" placeholder="Enter Number">
+             <p></p>
              <button id="btnCancel" class="btn btn-warning" data-toggle="modal" data-target="#myModal">Cancel</button>
              <button id="btnAdd" class="btn btn-success">Add</button>
          </ul>
      </div>
- </div>
+ <!--</form>-->
+
+
  <!-- The Modal -->
  <div class="modal fade" id="myModal">
      <div class="modal-dialog">
