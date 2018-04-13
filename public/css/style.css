@@ -179,4 +179,24 @@ footer{
   transform: translate(0,0);
 }
 
+#grpSel {
+  float: right;
+}
+
+#inputState {
+  margin-left: 220px;
+  width: 100%;
+}
+
+#form_message {
+  width: 500px;
+  height: 200px;
+  position: relative;
+  margin-left: 85px;
+}
+
+#inputState label {
+
+}
+
 

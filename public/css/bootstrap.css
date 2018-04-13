@@ -2550,7 +2550,8 @@ output {
 }
 .form-control {
   display: block;
-  width: 100%;
+  width: 50%;
+  margin: 0 auto;
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
@@ -3120,6 +3121,7 @@ fieldset[disabled] .btn-default.focus {
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4;
+  float: right;
 }
 .btn-primary:focus,
 .btn-primary.focus {
@@ -3590,6 +3592,9 @@ tbody.collapse.in {
 }
 .open > .dropdown-menu {
   display: block;
+  margin-left: 550px;
+  margin-top: 40px;
+  padding: 15px;
 }
 .open > a {
   outline: 0;
@@ -3991,7 +3996,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eee;
+  background: rgba(0, 86, 149, .2);
 }
 .nav > li.disabled > a {
   color: #777;

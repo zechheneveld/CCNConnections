@@ -18,6 +18,7 @@
     "express-messages": "*",
     "express-session": "*",
     "express-validator": "*",
+    "fastselect": "^0.7.3",
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
     "jquery": "^3.3.1",
