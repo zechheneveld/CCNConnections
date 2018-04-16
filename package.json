@@ -25,9 +25,11 @@
     "mongoose": "*",
     "morgan": "~1.9.0",
     "node-env-run": "^3.0.2",
+    "npm": "^5.8.0",
     "passport": "*",
     "passport-http": "*",
     "passport-local": "*",
+    "popper.js": "^1.14.3",
     "twilio": "^3.14.0"
   }
 }

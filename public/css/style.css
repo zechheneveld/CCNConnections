@@ -1,182 +1,198 @@
 /* Space out content a bit */
 body {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
-
 p {
-  text-align: center;
-  font-family: Palatino;
-  color: rgb(0, 86, 149);
+    text-align: center;
+    font-family: Palatino;
+    color: rgb(0, 86, 149);
 }
 
+.backgroundImage{
+    padding-bottom: 50px;
+}
 .background {
-  background-repeat: no-repeat;
-  z-index: -1000;
-  position: fixed;
-  width: 100%;
+    background-repeat: no-repeat;
+    z-index: -1000;
+    position: fixed;
+    width: 100%;
 }
-
 .logo {
-  width: 25%;
-  height: 25%;
-  padding-top: 10px;
+    width: 25%;
+    height: 25%;
+    padding-top: 10px;
 }
 
 label {
-  font-family: Palatino;
-  font-size: 15px;
-  color: rgb(0, 86, 149);
-  margin: 0 180px 5px;
+    font-family: Palatino;
+    font-size: 15px;
+    color: rgb(0, 86, 149);
+    position: relative;
+    margin: 0 auto;
+    padding-left: 180px;
+    height: 21px;
+
+}
+li a:hover {
+    color: rgb(0, 86, 149);
 }
 
-li a:hover {
-  color: rgb(0, 86, 149);
-}
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
 .footer {
-  padding-right: 15px;
-  padding-left: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
-
 /* Custom page header */
 .header {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
 }
-
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
 }
-
 /* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-    background: rgba(255, 255, 255, .5);
-    position: absolute;
-    margin: 50px 270px;
-  }
+@media (min-width: 320px) {
+    .container{
+        max-width: 730px;
+        background: rgba(255, 255, 255, .5);
+        position: relative;
+        margin: 0 auto;
+    }
 }
 .container-narrow > hr {
-  margin: 30px 0;
+    margin: 30px 0;
 }
+
+.container.form-group .container.submitButton{
+    position: fixed;
+    text-align: left;
+    }
 
 /* Main marketing message and sign up button */
 .jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
 }
 .jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
+    padding: 14px 24px;
+    font-size: 21px;
 }
-
 /* Supporting marketing content */
 .marketing {
-  margin: 40px 0;
+    margin: 40px 0;
 }
 .marketing p + h4 {
-  margin-top: 28px;
+    margin-top: 28px;
 }
-
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+@media screen and (min-width: 320px) {
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    label,
+    .footer{
+        padding-right: 0;
+        padding-left: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
 }
-
 .page-header{
-  margin-top:0;
-  text-align: center;
-  font-family: Palatino;
-  color: rgb(0, 86, 149);
+    margin-top:0;
+    text-align: center;
+    font-family: Palatino;
+    color: rgb(0, 86, 149);
 }
-
 footer{
-  margin-top:40px;
+    margin-top:40px;
 }
-
 .submitButton {
-  margin: 0 auto;
-  width: 15%;
+    margin: 0 auto;
+    width: 15%;
 }
-
 .button26 {
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-  position: relative;
-  border: 1px solid rgba(255,255,255,0.5);
-  overflow: hidden;
-  width: 100%;
-  background-color: #4cae4c;
-  color: white;
-  border-radius: 5px;
-  padding: 10px;
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
-
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.5);
+    overflow: hidden;
+    width: 100%;
+    background-color: #4cae4c;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
 }
 .button26 a{
-  color: rgba(51,51,51,1);
-  text-decoration: none;
-  display: block;
+    color: rgba(51,51,51,1);
+    text-decoration: none;
+    display: block;
 }
 .button26::before, .button26::after{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-  opacity: 1;
-  -webkit-transform: translate(-13%,-190%) rotate(-30deg);
-  transform: translate(-13%,-190%) rotate(-30deg);
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: rgba(255,255,255,1);
-  background-color: rgba(255,255,255,0.25);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    opacity: 1;
+    -webkit-transform: translate(-13%,-190%) rotate(-30deg);
+    transform: translate(-13%,-190%) rotate(-30deg);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(255,255,255,1);
+    background-color: rgba(255,255,255,0.25);
 }
 .button26::after{
-  -webkit-transition-delay: 0.2s; /* Safari */
-  transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s; /* Safari */
+    transition-delay: 0.2s;
 }
 .button26:hover::before, .button26:hover::after{
-  opacity: 0;
-  -webkit-transform: translate(0,0);
-  transform: translate(0,0);
+    opacity: 0;
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+}
+#grpSel {
+    float: right;
+}
+#inputState {
+    margin-left: 220px;
+    width: 100%;
 }
 
 
+#form_message {
+    width: 500px;
+    height: 200px;
+    position: relative;
+    margin-left: 85px;
+}
+#inputState label {
+}

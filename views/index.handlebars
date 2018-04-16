@@ -1,60 +1,22 @@
-
-<div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Add Contact
-        <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-        <input type="text" placeholder="Enter Number">
-        <p></p>
-        <button id="btnCancel" class="btn btn-warning" data-toggle="modal" data-target="#myModal">Cancel</button>
-        <button id="btnAdd" class="btn btn-success">Add</button>
-    </ul>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div id="groupSelect" class="form-group col-md-4">
+    <label id="group" for="inputState">Select Group:</label>
+    <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>Families</option>
+        <option>Volunteers</option>
+    </select>
 </div>
-
-
-             <div class="col-25">
-                 <label for="tagId">Group:</label>
-             </div>
-             <div class="col-25">
-                 <input type="text" id = "tagId" placeholder="Enter Tag"/>
-             </div>
-             <div class="col-25">
-                 <label for="grpSel">Selected Groups:</label>
-             </div>
-             <div class="col-25">
-                 <textarea id="grpSel" rows="8" cols="25" name="groups" placeholder="Selected Groups" ></textarea>
-             </div>
-
-            <div class="col-20">
-                 <label for="txtMsg">Message:</label>
-             </div>
-             <div class="col-80">
-                 <textarea id="txtMsg" rows="8" cols="50" name="comment" placeholder="Enter Message"></textarea>
-             </div>
-
-            <button id = "cnlTxt" class="btn btn-warning">Cancel</button>
-            <div class="submitButton">
-                <button type="submit" class="sim-button button26"><span>Submit</span></button>
-            </div>
-<div class="modal fade" id="myModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h4 class="modal-title">Are you sure you want to Cancel?</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-
-            <!-- Modal body -->
-            <div class="modal-body">
-                Press X to Close This Box
-            </div>
-
-            <!-- Modal footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-warning" data-dismiss="modal">Go Back</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
-            </div>
+<div class="row">
+    <div class="col-md-12">
+        <div id="messageBox" class="form-group">
+            <label id="message" for="form_message">Enter Message:</label>
+            <textarea id="form_message" name="message" class="form-control" placeholder="Enter Message.." rows="4"></textarea>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="submitButton">
+            <button type="submit" class="sim-button button26"><span>Send</span></button>
         </div>
     </div>
 </div>

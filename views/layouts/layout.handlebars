@@ -2,9 +2,9 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -14,48 +14,48 @@
     <img class="background" src="http://localhost:3000/images/CCNBackground.jpg" alt="My_Logo">
 </div>
 
-	<div class="container">
-      <div class="header clearfix">
+<div class="container">
+    <div class="header clearfix">
         <nav>
-          <ul class="nav nav-pills pull-right">
-            {{#if user}}
-              <li role="presentation"><a href="/">Home</a></li>
-                <li id="register" role="presentation"><a href="/users/register">Add User</a></li>
-              <li role="presentation"><a href="/users/logout">Logout</a></li>
-            {{else}}
-            {{/if}}
-          </ul>
+            <ul class="nav nav-pills pull-right">
+                {{#if user}}
+                    <li role="presentation"><a href="/">Home</a></li>
+                    <li id="register" role="presentation"><a href="/users/register">New Admin</a></li>
+                    <li role="presentation"><a href="/users/logout">Logout</a></li>
+                {{else}}
+                {{/if}}
+            </ul>
         </nav>
-          <img class="logo" src="http://localhost:3000/images/logo.png" alt="My_Logo">
-            {{#if user}}
-        <h2 class="page-header">CCN Connections Dashboard</h2>
-            {{/if}}
-      </div>
+        <img class="logo" src="http://localhost:3000/images/logo.png" alt="My_Logo">
+        {{#if user}}
+            <h2 class="page-header">CCN Connections Dashboard</h2>
+        {{/if}}
+    </div>
 
-      <div class="row">
+    <div class="row">
         <div class="col-lg-12">
-          {{#if success_msg}}
-            <div class="alert alert-success">{{success_msg}}</div>
-          {{/if}}
+            {{#if success_msg}}
+                <div class="alert alert-success">{{success_msg}}</div>
+            {{/if}}
 
-          {{#if error_msg}}
-            <div class="alert alert-danger">{{error_msg}}</div>
-          {{/if}}
+            {{#if error_msg}}
+                <div class="alert alert-danger">{{error_msg}}</div>
+            {{/if}}
 
-          {{#if error}}
-            <div class="alert alert-danger">{{error}}</div>
-          {{/if}}
-          
-          {{{body}}}
+            {{#if error}}
+                <div class="alert alert-danger">{{error}}</div>
+            {{/if}}
+
+            {{{body}}}
         </div>
 
-        
-      </div>
 
-      <footer class="footer">
+    </div>
+
+    <footer class="footer">
         <p>&copy; 2018 Children’s Cancer Network. A registered 501(c)3 in Arizona. All rights reserved.</p>
-      </footer>
+    </footer>
 
-    </div> <!-- /container -->
+</div> <!-- /container -->
 </body>
 </html>
