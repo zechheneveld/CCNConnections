@@ -274,6 +274,7 @@ th {
   font-style: normal;
   font-weight: normal;
   line-height: 1;
+  float: left;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -3004,7 +3005,7 @@ select[multiple].input-lg {
   }
 }
 .btn {
-  display: inline-block;
+  display: block;
   padding: 6px 12px;
   margin-bottom: 0;
   font-size: 14px;
@@ -3023,6 +3024,8 @@ select[multiple].input-lg {
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
+  width: 15%;
+  margin: 0 auto;
 }
 .btn:focus,
 .btn:active:focus,

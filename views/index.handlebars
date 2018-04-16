@@ -1,6 +1,6 @@
 
-<div class="form-group col-md-4">
-    <label for="inputState">Select Group:</label>
+<div id="groupSelect" class="form-group col-md-4">
+    <label id="group" for="inputState">Select Group:</label>
     <select id="inputState" class="form-control">
         <option selected>Choose...</option>
         <option>Families</option>
@@ -12,15 +12,13 @@
 
 <div class="row">
     <div class="col-md-12">
-        <div class="form-group">
-            <label for="form_message">Enter Message:</label>
-            <textarea id="form_message" name="message" class="form-control" placeholder="Enter Message.." rows="4" required="required" data-error="Please,leave us a message."></textarea>
-            <div class="help-block with-errors"></div>
+        <div id="messageBox" class="form-group">
+            <label id="message" for="form_message">Enter Message:</label>
+            <textarea id="form_message" name="message" class="form-control" placeholder="Enter Message.." rows="4"></textarea>
         </div>
     </div>
-    <div class="col-md-12">
-        <div class="submitButton">
-            <button type="submit" class="sim-button button26"><span>Send</span></button>
-        </div>
-    </div>
+</div>
+
+<div class="sendBtn">
+    <a href="#" class="btn btn-success btn-default"><span class="glyphicon glyphicon-send"></span>Send</a>
 </div>

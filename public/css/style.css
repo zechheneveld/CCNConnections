@@ -3,6 +3,10 @@ body {
   padding-bottom: 20px;
 }
 
+.backgroundImage{
+  padding-bottom: 50px;
+}
+
 p {
   text-align: center;
   font-family: Palatino;
@@ -22,7 +26,13 @@ p {
   padding-top: 10px;
 }
 
-label {
+#username {
+  font-family: Palatino;
+  font-size: 15px;
+  color: rgb(0, 86, 149);
+  margin: 0 180px 5px;
+}
+#password {
   font-family: Palatino;
   font-size: 15px;
   color: rgb(0, 86, 149);
@@ -65,8 +75,8 @@ li a:hover {
   .container {
     max-width: 730px;
     background: rgba(255, 255, 255, .5);
-    position: absolute;
-    margin: 50px 270px;
+    position: relative;
+    margin: 0 auto;
   }
 }
 .container-narrow > hr {
@@ -112,6 +122,13 @@ li a:hover {
 
 .page-header{
   margin-top:0;
+  text-align: center;
+  font-family: Palatino;
+  color: rgb(0, 86, 149);
+}
+
+.dashboardHead {
+  margin-bottom:0;
   text-align: center;
   font-family: Palatino;
   color: rgb(0, 86, 149);
@@ -179,24 +196,63 @@ footer{
   transform: translate(0,0);
 }
 
+.button26:active{
+  background: #f06a7c;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f06a7c), to(#f56c7e));
+  background: -moz-linear-gradient(#f06a7c, #f56c7e);
+  background: linear-gradient(#f06a7c, #f56c7e);
+  border: solid 1px #a14753;
+  box-shadow: inset 0 10px 15px 0 #d45d6d;
+}
+
+
 #grpSel {
   float: right;
 }
 
+#form_message {
+  width: 500px;
+  height: 280px;
+  position: relative;
+  resize: none;
+
+}
+
 #inputState {
-  margin-left: 220px;
   width: 100%;
 }
 
-#form_message {
-  width: 500px;
-  height: 200px;
-  position: relative;
-  margin-left: 85px;
+#groupSelect {
+  margin-left: 220px;
 }
 
-#inputState label {
-
+#message {
+  font-family: Palatino;
+  color: rgb(0, 86, 149);
+  margin-left: 100px;
 }
 
+#group {
+  font-family: Palatino;
+  color: rgb(0, 86, 149);
+}
 
+#messageBox span {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+.btn.btn-success {
+  color: #ffffff;
+  background-color: #5CB85C;
+  background-image: linear-gradient(to bottom, #5CB85C, #419641);
+  border-color: #3E8F3E #3E8F3E #3E8F3E;
+  font-size: 16px;
+}
+.btn.btn-success:hover {
+  color: #ffffff;
+  background-color: #419641;
+  background-image: linear-gradient(to bottom, #419641, #419641);
+  border-color: #3E8F3E #3E8F3E #3E8F3E;
+}

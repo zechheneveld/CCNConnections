@@ -19,16 +19,18 @@
         <nav>
           <ul class="nav nav-pills pull-right">
             {{#if user}}
-              <li role="presentation"><a href="/">Home</a></li>
-                <li id="register" role="presentation"><a href="/users/register">Add User</a></li>
+              <li role="presentation"><a href="/"><span class="glyphicon glyphicon-home"></span></a></li>
+                <li id="register" role="presentation"><a href="/users/register"><span class="glyphicon glyphicon-user"></span></a></li>
               <li role="presentation"><a href="/users/logout">Logout</a></li>
             {{else}}
             {{/if}}
           </ul>
         </nav>
-          <img class="logo" src="http://localhost:3000/images/logo.png" alt="My_Logo">
+          <a href="/">
+              <img class="logo" src="http://localhost:3000/images/logo.png" alt="My_Logo">
+          </a>
             {{#if user}}
-        <h2 class="page-header">CCN Connections Dashboard</h2>
+        <h2 class="dashboardHead">CCN Connections Dashboard</h2>
             {{/if}}
       </div>
 
