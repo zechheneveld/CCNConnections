@@ -39,6 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Express Session
 app.use(session({
     secret: 'secret',
+    key: 'user',
     saveUninitialized: true,
     resave: true
 }));

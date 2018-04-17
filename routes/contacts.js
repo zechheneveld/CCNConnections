@@ -48,6 +48,41 @@ router.post('/contact', function(req, res){
     }
 });
 
+//Load Edit form
+router.get('/edit/:id', function (req, res) {
+    Contact.findById(req.params.id, function (err, contact) {
+        res.render('edit_contact', {
+            contact: contact
+        });
+    });
+});
 
+//Update Submit POST Route
+router.post('/edit/:id', function (req, res){
+   let contact = {};
+   contact.group = req.body.group;
+   contact.number = req.body.number;
+
+   let query = {_id:req.params.id};
+
+   Contact.update(query, contact, function (err) {
+       if (err){
+           console.log(err);
+           return;
+       } else {
+           req.flash('success', 'Contact Updated');
+           res.redirect('/')
+       }
+   });
+});
+
+//Get single contact
+router.get('/:id', function (req, res) {
+    Contact.findById(req.params.id, function (err, contact) {
+        res.render('contact', {
+           contact: contact
+        });
+    });
+});
 
 module.exports = router;
