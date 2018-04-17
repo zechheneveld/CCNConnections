@@ -1,5 +1,6 @@
 require('dotenv').load();
 const express = require('express');
+const router = express.Router();
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const serviceSid = process.env.TWILIO_MESSAGING_SERVICE_SID;
@@ -13,16 +14,18 @@ const twilio = require('twilio')(
 );
 const body = 'Welcome to CCN Connections';
 
-
-
-    addedNumbers.push($("#phoneNumber").val());
-    console.log(addedNumbers);
-
+// router.post('/index', function (req, res) {
+//     addedNumbers.push(req.body.txtClient1);
+//     console.log(req.body.txtClient1);
+//
+// });
 
 const numbers = addedNumbers;
+// ['15189323461', '16027906734', '17143922107', '15309493838', '14803041092'];
 
-    // ['15189323461', '16027906734', '17143922107', '15309493838'];
-
+//req.body.txtClient1
+//POST MESSAGE
+// router.post('/index', function (req, res) {
 Promise.all(
     numbers.map(numbers => {
         return twilio.messages.create({
@@ -32,7 +35,11 @@ Promise.all(
         });
     })
 )
+// })
+
     .then(messages => {
         console.log('Messages sent!');
     })
     .catch(err => console.error(err));
+
+module.exports = router;
