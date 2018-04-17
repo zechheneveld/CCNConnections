@@ -14,14 +14,16 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/loginapp');
 var db = mongoose.connection;
 
+// Init App
+var app = express();
+
 // var client = require('./public/js/client');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var contacts = require('./routes/contacts');
 var ccn = require('./routes/ccn');
 
-// Init App
-var app = express();
+
 
 // View Engine
 app.set('views', path.join(__dirname, 'views'));
