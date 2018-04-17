@@ -2,22 +2,13 @@
 body {
     padding-bottom: 20px;
 }
-<<<<<<< HEAD
-
 .backgroundImage{
-  padding-bottom: 50px;
+    padding-bottom: 50px;
 }
-
-=======
->>>>>>> ba71f2b31912b057376be172636ea3d7688fd6ea
 p {
     text-align: center;
     font-family: Palatino;
     color: rgb(0, 86, 149);
-}
-
-.backgroundImage{
-    padding-bottom: 50px;
 }
 .background {
     background-repeat: no-repeat;
@@ -30,37 +21,21 @@ p {
     height: 25%;
     padding-top: 10px;
 }
-
-<<<<<<< HEAD
 #username {
-  font-family: Palatino;
-  font-size: 15px;
-  color: rgb(0, 86, 149);
-  margin: 0 180px 5px;
-}
-#password {
-  font-family: Palatino;
-  font-size: 15px;
-  color: rgb(0, 86, 149);
-  margin: 0 180px 5px;
-}
-=======
-label {
     font-family: Palatino;
     font-size: 15px;
     color: rgb(0, 86, 149);
-    position: relative;
-    margin: 0 auto;
-    padding-left: 180px;
-    height: 21px;
->>>>>>> ba71f2b31912b057376be172636ea3d7688fd6ea
-
+    margin: 0 180px 5px;
+}
+#password {
+    font-family: Palatino;
+    font-size: 15px;
+    color: rgb(0, 86, 149);
+    margin: 0 180px 5px;
 }
 li a:hover {
     color: rgb(0, 86, 149);
 }
-
-
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -86,33 +61,17 @@ li a:hover {
     border-top: 1px solid #e5e5e5;
 }
 /* Customize container */
-<<<<<<< HEAD
 @media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-    background: rgba(255, 255, 255, .5);
-    position: relative;
-    margin: 0 auto;
-  }
-=======
-@media (min-width: 320px) {
-    .container{
+    .container {
         max-width: 730px;
         background: rgba(255, 255, 255, .5);
         position: relative;
         margin: 0 auto;
     }
->>>>>>> ba71f2b31912b057376be172636ea3d7688fd6ea
 }
 .container-narrow > hr {
     margin: 30px 0;
 }
-
-.container.form-group .container.submitButton{
-    position: fixed;
-    text-align: left;
-    }
-
 /* Main marketing message and sign up button */
 .jumbotron {
     text-align: center;
@@ -130,12 +89,11 @@ li a:hover {
     margin-top: 28px;
 }
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 768px) {
     /* Remove the padding we set earlier */
     .header,
     .marketing,
-    label,
-    .footer{
+    .footer {
         padding-right: 0;
         padding-left: 0;
     }
@@ -154,17 +112,12 @@ li a:hover {
     font-family: Palatino;
     color: rgb(0, 86, 149);
 }
-<<<<<<< HEAD
-
 .dashboardHead {
-  margin-bottom:0;
-  text-align: center;
-  font-family: Palatino;
-  color: rgb(0, 86, 149);
+    margin-bottom:0;
+    text-align: center;
+    font-family: Palatino;
+    color: rgb(0, 86, 149);
 }
-
-=======
->>>>>>> ba71f2b31912b057376be172636ea3d7688fd6ea
 footer{
     margin-top:40px;
 }
@@ -223,111 +176,53 @@ footer{
     -webkit-transform: translate(0,0);
     transform: translate(0,0);
 }
+.button26:active{
+    background: #f06a7c;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f06a7c), to(#f56c7e));
+    background: -moz-linear-gradient(#f06a7c, #f56c7e);
+    background: linear-gradient(#f06a7c, #f56c7e);
+    border: solid 1px #a14753;
+    box-shadow: inset 0 10px 15px 0 #d45d6d;
+}
 #grpSel {
     float: right;
 }
-#inputState {
-    margin-left: 220px;
-    width: 100%;
-}
-
-.button26:active{
-  background: #f06a7c;
-  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f06a7c), to(#f56c7e));
-  background: -moz-linear-gradient(#f06a7c, #f56c7e);
-  background: linear-gradient(#f06a7c, #f56c7e);
-  border: solid 1px #a14753;
-  box-shadow: inset 0 10px 15px 0 #d45d6d;
-}
-
-
-#grpSel {
-  float: right;
-}
-
-#form_message {
-  width: 500px;
-  height: 280px;
-  position: relative;
-  resize: none;
-
-}
-
-#inputState {
-  width: 100%;
-}
-
-#groupSelect {
-  margin-left: 220px;
-}
-
-#message {
-  font-family: Palatino;
-  color: rgb(0, 86, 149);
-  margin-left: 100px;
-}
-
-#group {
-  font-family: Palatino;
-  color: rgb(0, 86, 149);
-}
-
-#messageBox span {
-  position: absolute;
-  bottom: 5px;
-  right: 10px;
-}
-
-.btn.btn-success {
-  color: #ffffff;
-  background-color: #5CB85C;
-  background-image: linear-gradient(to bottom, #5CB85C, #419641);
-  border-color: #3E8F3E #3E8F3E #3E8F3E;
-  font-size: 16px;
-}
-.btn.btn-success:hover {
-  color: #ffffff;
-  background-color: #419641;
-  background-image: linear-gradient(to bottom, #419641, #419641);
-  border-color: #3E8F3E #3E8F3E #3E8F3E;
-}
-
-#sendBtn.clicked .glyphicon {
-  animation: flyaway 1.3s linear;
-  top: -80px;
-  right: -1000px;
-}
-
-<<<<<<< HEAD
-@keyframes flyaway {
-  0%   { transform: rotate(10deg);
-    top: 13px;
-    right: 25px;
-    height: 30px; }
-  5%   { transform: rotate(10deg);
-    top: 13px;
-    right: 0px;
-    height: 30px; }
-  20%   { transform: rotate(-20deg);
-    top: 13px;
-    right: -130px;
-    height: 45px; }
-  40%   { transform: rotate(10deg);
-    top: -40px;
-    right: -280px;
-    opacity: 1; }
-  100% { transform: rotate(60deg);
-    top: -200px;
-    right: -1000px;
-    height: 0;
-    opacity: 0; }
-=======
 #form_message {
     width: 500px;
-    height: 200px;
+    height: 280px;
     position: relative;
-    margin-left: 85px;
+    resize: none;
 }
-#inputState label {
->>>>>>> ba71f2b31912b057376be172636ea3d7688fd6ea
+#inputState {
+    width: 100%;
+}
+#groupSelect {
+    margin-left: 220px;
+}
+#message {
+    font-family: Palatino;
+    color: rgb(0, 86, 149);
+    margin-left: 100px;
+}
+#group {
+    font-family: Palatino;
+    color: rgb(0, 86, 149);
+}
+#messageBox span {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+.btn.btn-success {
+    color: #ffffff;
+    background-color: #5CB85C;
+    background-image: linear-gradient(to bottom, #5CB85C, #419641);
+    border-color: #3E8F3E #3E8F3E #3E8F3E;
+    font-size: 16px;
+}
+.btn.btn-success:hover {
+    color: #ffffff;
+    background-color: #419641;
+    background-image: linear-gradient(to bottom, #419641, #419641);
+    border-color: #3E8F3E #3E8F3E #3E8F3E;
 }
