@@ -80,11 +80,10 @@ app.use(function (req, res, next) {
     next();
 });
 
-
+app.use('/ccn', ccn);
 app.use('/users', users);
 app.use('/contacts', contacts);
 // app.use('/client', client);
-app.use('/ccn', ccn);
 app.use('/', routes);
 
 

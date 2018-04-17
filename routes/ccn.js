@@ -5,6 +5,8 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const serviceSid = process.env.TWILIO_MESSAGING_SERVICE_SID;
 
+var addedNumbers = [];
+
 router.post('/', function (req, res, next) {
     console.log(req.body);
     res.send({messageFromServer: 'Got it!'});
