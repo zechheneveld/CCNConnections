@@ -1,5 +1,5 @@
 console.log("Client loaded");
-var addedNumbers = [];
+var SendOver;
 
 $(document).ready(function () {
     init();
@@ -7,49 +7,37 @@ $(document).ready(function () {
 
 function init() {
 
-
     $("#btnAdd").on("click", function (e) {
         e.preventDefault();
-
-        addedNumbers.push("1" + $("#txtClient1").val());
-
+         SendOver = {
+             number: "1" + $("#txtClient1").val(),
+             message: ""
+         };
         $("#txtClient1").val("");
+        SendInfo();
     });
 
     $("#messageSend").on("click", function (e) {
         e.preventDefault();
 
-        var SentOver = {
-            number: "1" + $("#txtClient1").val(),
+        SendOver = {
+            number: "1",
             message: $("#form_message").val()
         };
-        $("#txtClient1").val("");
+        $("#form_message").val("");
+        SendInfo();
 
+    });
+
+    function SendInfo() {
         $.ajax({
             type: "POST",
             url: "/ccn",
-            data: SentOver,
+            data: SendOver,
             success: function (responseFromServer) {
                 console.log(responseFromServer);
             }
         });
-        console.log(SentOver)
-    });
-    // $("#messageSend").on("click", function (e) {
-    //     e.preventDefault();
-
-        // var messages = {
-        //     message: $("#form_message").val()
-        // };
-        // $.ajax({
-        //     type: "POST",
-        //     url: "/ccn",
-        //     data: messages,
-        //     success: function(Message){
-        //         console.log(Message);
-        //     }
-        // });
-        // console.log(messages)
-    // });
-
+        console.log(SendOver)
+    }
 }

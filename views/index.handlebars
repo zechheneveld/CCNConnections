@@ -1,7 +1,6 @@
  <h2 class="page-header">Home Page</h2>
 
 
- <!--<form id="twilioForm" role="form" method="POST" action="/twilio/messages">-->
      <div class="dropdown">
          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Add Contact
              <span class="caret"></span></button>
@@ -9,12 +8,9 @@
              <input id="txtClient1" type="text" placeholder="(xxx) xxx-xxxx">
              <p></p>
              <button id="btnCancel" class="btn btn-warning" data-toggle="modal" data-target="#myModal">Cancel</button>
-             <div class="sendBtn">
-                 <a href="#" id="messageSend" class="btn btn-success btn-default"><span class="glyphicon glyphicon-send"></span>Send</a>
-             </div>
+             <button id="btnAdd" class="btn btn-success">Add</button>
          </ul>
      </div>
- <!--</form>-->
 
  <div id="groupSelect" class="form-group col-md-4">
      <label id="group" for="inputState">Select Group:</label>
@@ -33,7 +29,7 @@
      </div>
  </div>
  <div class="sendBtn">
-     <a href="#" id="messageSend" class="btn btn-success btn-default"><span class="glyphicon glyphicon-send"></span>Send</a>
+     <button  id="messageSend" class="btn btn-success btn-default">Send</button>
  </div>
 
 

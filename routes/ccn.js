@@ -1,9 +1,18 @@
 require('dotenv').load();
 const express = require('express');
 const router = express.Router();
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const serviceSid = process.env.TWILIO_MESSAGING_SERVICE_SID;
+
+var Contact = require('../models/contact');
+
+router.get('/contact', function(req, res){
+    res.render('contact');
+});
+
 
 var numbers;
 var addedNumbers = [];
@@ -11,25 +20,38 @@ var message;
 
 // //Message
 router.post('/', function (req, res, next) {
-    console.log(req.body);
+
     res.send({messageFromServer: 'Got message!'});
     message = req.body.message;
-    console.log(addedNumbers);
-    console.log(req.body.message);
 
-if (req.body.number != '1'){
+
+    if (req.body.number != '1'){
     addedNumbers.push(req.body.number);
 
 } else {
     console.log("no number")
 }
 
-//Numbers
-// router.post('/', function (req, res, next) {
-//     console.log(req.body);
-//     res.send({messageFromServer: 'Got number!'});
-//     addedNumbers.push(req.body.number);
-//     console.log(addedNumbers);
+    var errors = req.validationErrors();
+
+    if(errors){
+        res.render('contact',{
+            errors:errors
+        });
+    } else {
+        var newContact = new Contact({
+            number:addedNumbers
+        });
+
+        Contact.createContact(newContact, function(err, contact){
+            if(err) throw err;
+            console.log(contact);
+        });
+
+        req.flash('success_msg', 'Number registered and can now be used');
+
+        // res.redirect('/');
+    }
 
 
 
