@@ -4,53 +4,15 @@
         <div class="alert alert-danger">{{msg}}</div>
     {{/each}}
 {{/if}}
-<div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Add Contact
-        <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-        <input id="txtClient1" type="text" placeholder="Enter Number">
-        <p></p>
-        <button id="btnCancel" class="btn btn-warning" data-toggle="modal" data-target="#myModal">Cancel</button>
-        <button id="btnAdd" class="btn btn-success">Add</button>
-    </ul>
-</div>
-
-
 
 <form method="post" action="/contacts/contact">
     <div class="form-group">
-        <label>Group</label>
-        <input type="text" class="form-control" placeholder="Group" name="group">
-    </div>
-    <div class="form-group">
         <label>Number</label>
-        <input type="text" class="form-control" placeholder="Number" name="number">
+        <input id="txtClient1" type="text" class="form-control" placeholder="Number" name="number">
     </div>
-    <button type="submit" class="btn btn-default">Submit</button>
+    <div class="sendBtn">
+        <a href="#" id="messageSend" class="btn btn-success btn-default"><span class="glyphicon glyphicon-send"></span>Send</a>
+    </div>
 </form>
 
 
-<!-- The Modal -->
-<div class="modal fade" id="myModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h4 class="modal-title">Are you sure you want to Cancel?</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-
-            <!-- Modal body -->
-            <div class="modal-body">
-                Press X to Close This Box
-            </div>
-
-            <!-- Modal footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-warning" data-dismiss="modal">Go Back</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
-            </div>
-        </div>
-    </div>
-</div>

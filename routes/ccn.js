@@ -5,7 +5,7 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const serviceSid = process.env.TWILIO_MESSAGING_SERVICE_SID;
 
-
+var numbers;
 var addedNumbers = [];
 var message;
 
@@ -14,8 +14,15 @@ router.post('/', function (req, res, next) {
     console.log(req.body);
     res.send({messageFromServer: 'Got message!'});
     message = req.body.message;
+    console.log(addedNumbers);
+    console.log(req.body.message);
+
+if (req.body.number != '1'){
     addedNumbers.push(req.body.number);
-    console.log(req.body.number);
+
+} else {
+    console.log("no number")
+}
 
 //Numbers
 // router.post('/', function (req, res, next) {
@@ -23,7 +30,6 @@ router.post('/', function (req, res, next) {
 //     res.send({messageFromServer: 'Got number!'});
 //     addedNumbers.push(req.body.number);
 //     console.log(addedNumbers);
-
 
 
 
@@ -35,9 +41,8 @@ const twilio = require('twilio')(
 const body = 'both working';
 
 
-
-    const numbers = addedNumbers;
-
+if (message != '') {
+    numbers = addedNumbers;
 
 
     // ['15189323461', '16027906734', '17143922107', '15309493838', '14803041092','15189323461'];
@@ -54,11 +59,15 @@ const body = 'both working';
     )
 
 
-    .then(messages => {
-        console.log('Messages sent!');
-    })
-    .catch(err => console.error(err));
+        .then(messages => {
+            console.log('Messages sent!');
+        })
+        .catch(err => console.error(err));
+} else {
+    req.flash('success', 'Contact Updated');
 
+    console.log("number added")
+}
 });
 
 

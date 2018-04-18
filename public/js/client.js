@@ -20,7 +20,7 @@ function init() {
         e.preventDefault();
 
         var SentOver = {
-            number: addedNumbers,
+            number: "1" + $("#txtClient1").val(),
             message: $("#form_message").val()
         };
         $("#txtClient1").val("");
