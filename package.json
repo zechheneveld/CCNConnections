@@ -8,6 +8,7 @@
   "dependencies": {
     "bcryptjs": "*",
     "body-parser": "*",
+    "bootbox": "^4.4.0",
     "bootstrap": "^4.1.0",
     "connect-flash": "*",
     "cookie-parser": "~1.4.3",
@@ -19,6 +20,7 @@
     "express-session": "*",
     "express-validator": "*",
     "fastselect": "^0.7.3",
+    "font-awesome": "^4.7.0",
     "glyphicons": "^0.2.0",
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",

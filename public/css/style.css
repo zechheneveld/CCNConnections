@@ -21,6 +21,49 @@ p {
     height: 25%;
     padding-top: 10px;
 }
+div.loginscreen{
+    display: table-cell;
+    vertical-align: text-top;
+    margin: 0 auto;
+    width: 50%;
+}
+div.registerpage{
+    display: table-cell;
+    vertical-align: text-top;
+    margin: 0 auto;
+    width: 50%;
+}
+div.contactspage{
+    display: table-cell;
+    vertical-align: text-top;
+    margin: 0 auto;
+    width: 50%;
+}
+div.messagecenter{
+    display: table-cell;
+    vertical-align: text-top;
+    margin: 0 auto;
+    width: 50%;
+}
+div#groupSelect.form-group.col-md-4{
+    display: table-cell;
+    vertical-align: text-top;
+    width: 50%;
+}
+label{
+    display: inline-block;
+    vertical-align: text-top;
+}
+label#group{
+    margin: inherit;
+    display: table-cell;
+    padding-left: 45px;
+}
+label#message{
+    display: table-cell;
+    margin: inherit;
+    padding-left: 100px;
+}
 #username {
     font-family: Palatino;
     font-size: 15px;
@@ -28,6 +71,60 @@ p {
     margin: 0 180px 5px;
 }
 #password {
+    font-family: Palatino;
+    font-size: 15px;
+    color: rgb(0, 86, 149);
+    margin: 0 180px 5px;
+}
+#fname {
+    font-family: Palatino;
+    font-size: 15px;
+    color: rgb(0, 86, 149);
+    margin: 0 180px 5px;
+}
+#usrname {
+    font-family: Palatino;
+    font-size: 15px;
+    color: rgb(0, 86, 149);
+    margin: 0 180px 5px;
+}
+#email {
+    font-family: Palatino;
+    font-size: 15px;
+    color: rgb(0, 86, 149);
+    margin: 0 180px 5px;
+}
+#pw {
+    font-family: Palatino;
+    font-size: 15px;
+    color: rgb(0, 86, 149);
+    margin: 0 180px 5px;
+}
+#cpw{
+    font-family: Palatino;
+    font-size: 15px;
+    color: rgb(0, 86, 149);
+    margin: 0 180px 5px;
+}
+#groupname{
+    font-family: Palatino;
+    font-size: 15px;
+    color: rgb(0, 86, 149);
+    margin: 0 180px 5px;
+}
+#phonenumber{
+    font-family: Palatino;
+    font-size: 15px;
+    color: rgb(0, 86, 149);
+    margin: 0 180px 5px;
+}
+#group{
+    font-family: Palatino;
+    font-size: 15px;
+    color: rgb(0, 86, 149);
+    margin: 0 180px 5px;
+}
+#message{
     font-family: Palatino;
     font-size: 15px;
     color: rgb(0, 86, 149);
@@ -62,8 +159,8 @@ li a:hover {
 }
 /* Customize container */
 @media (min-width: 768px) {
-    .container {
-        max-width: 730px;
+    .container{
+        max-width: 800px;
         background: rgba(255, 255, 255, .5);
         position: relative;
         margin: 0 auto;
@@ -91,6 +188,21 @@ li a:hover {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     /* Remove the padding we set earlier */
+    #username,
+    #inputState,
+    #password,
+    .form-group,
+    #form_message,
+    #groupSelect,
+    .loginscreen,
+    .registerpage,
+    .contactspage,
+    .messagecenter,
+    .row,
+    .col-md-12,
+    .col-md-4,
+    .submitButton,
+    .sendBtn,
     .header,
     .marketing,
     .footer {
@@ -188,25 +300,24 @@ footer{
     float: right;
 }
 #form_message {
-    width: 500px;
-    height: 280px;
+    width: 75%;
+    height: 250px;
     position: relative;
     resize: none;
+    margin: 0 auto;
 }
 #inputState {
-    width: 100%;
+    width: 75%;
+    height: 30px;
+    position: relative;
+    resize: none;
+    margin: 0 auto;
 }
 #groupSelect {
-    margin-left: 220px;
-}
-#message {
     font-family: Palatino;
+    font-size: 15px;
     color: rgb(0, 86, 149);
-    margin-left: 100px;
-}
-#group {
-    font-family: Palatino;
-    color: rgb(0, 86, 149);
+    margin: 0 180px 5px;
 }
 #messageBox span {
     position: absolute;
@@ -225,4 +336,68 @@ footer{
     background-color: #419641;
     background-image: linear-gradient(to bottom, #419641, #419641);
     border-color: #3E8F3E #3E8F3E #3E8F3E;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    outline: none;
+    height: 40px;
+    text-align: center;
+    width: 130px;
+    border-radius: 40px;
+    background: rgb(0, 86, 149);
+    border: 2px solid white;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: 0;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: block;
+    margin: 0 auto;
+}
+button:active {
+    letter-spacing: 2px;
+}
+button:after {
+    content: "Send";
+    font-size: 15px;
+}
+
+button:hover {
+    color: #ffcc00;;
+}
+.onclic {
+    width: 40px;
+    border-color: white;
+    border-width: 3px;
+    font-size: 0;
+    border-left-color: #ffcc00;
+    animation: rotating 2s 0.25s linear;
+}
+.onclic:after {
+    content: "";
+}
+
+.validate {
+    font-size: 13px;
+    color: #ffcc00;
+    background: rgb(0, 86, 149);
+}
+.validate:after {
+    font-family: 'FontAwesome';
+    content: "\f00c";
+    font-size: 20px;
+}
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
