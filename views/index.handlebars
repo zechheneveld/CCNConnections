@@ -1,3 +1,34 @@
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="font-size: 15px">Add Contact</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 id="modalTitle" class="modal-title">Add Contact</h4>
+            </div>
+            <div class="modal-body">
+                <p>Enter Number:</p>
+                <input id="txtClient1" type="text" class="form-control" name="contact" placeholder="ex: 1234567891">
+                <p style="padding-top: 20px">Select Group:</p>
+                <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>Families</option>
+                    <option>Volunteers</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button id="btnAdd" type="button" class="btn btn-success" data-dismiss="modal">Add</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove" style="padding-top: 2px;"></span>Cancel</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
 <div id="groupSelect" class="form-group col-md-4">
     <label id="group" for="inputState">Select Group:</label>
     <select id="inputState" class="form-control">
@@ -15,25 +46,29 @@
     </div>
 </div>
 
-    <button id="button"></button>
+<div id="sendBtn">
+    <button id="messageSend" class="btn btn-success">Send</button>
+</div>
+
+    <!--<button id="button"></button>-->
 
 
-<script>
-    $(function() {
-        $( "#button" ).click(function() {
-            $( "#button" ).addClass( "onclic", 250, validate());
-        });
+<!--<script>-->
+    <!--$(function() {-->
+        <!--$( "#button" ).click(function() {-->
+            <!--$( "#button" ).addClass( "onclic", 250, validate());-->
+        <!--});-->
 
-        function validate() {
-            setTimeout(function() {
-                $( "#button" ).removeClass( "onclic" );
-                $( "#button" ).addClass( "validate", 450, callback());
-            }, 2250 );
-        }
-        function callback() {
-            setTimeout(function() {
-                $( "#button" ).removeClass( "validate" );
-            }, 1250 );
-        }
-    });
-</script>
+        <!--function validate() {-->
+            <!--setTimeout(function() {-->
+                <!--$( "#button" ).removeClass( "onclic" );-->
+                <!--$( "#button" ).addClass( "validate", 450, callback());-->
+            <!--}, 2250 );-->
+        <!--}-->
+        <!--function callback() {-->
+            <!--setTimeout(function() {-->
+                <!--$( "#button" ).removeClass( "validate" );-->
+            <!--}, 1250 );-->
+        <!--}-->
+    <!--});-->
+<!--</script>-->

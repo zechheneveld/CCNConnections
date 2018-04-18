@@ -1,21 +1,36 @@
-// var express = require('express');
-// var router = express.Router();
-
-let addedNumbers = [];
-
+console.log("Client loaded");
+var SendOver;
 $(document).ready(function () {
+    init();
+});
+function init() {
     $("#btnAdd").on("click", function (e) {
         e.preventDefault();
-        // req.flash('success_msg', 'Contact added');
-        console.log("clicked");
-        addContact();
+        SendOver = {
+            number: "1" + $("#txtClient1").val(),
+            message: ""
+        };
+        $("#txtClient1").val("");
+        SendInfo();
     });
-    $("#txtClient1").val("")
-});
-function addContact(){
-    addedNumbers.push("1"+$("#txtClient1").val());
-    console.log(addedNumbers);
+    $("#messageSend").on("click", function (e) {
+        e.preventDefault();
+        SendOver = {
+            number: "1",
+            message: $("#form_message").val()
+        };
+        $("#form_message").val("");
+        SendInfo();
+    });
+    function SendInfo() {
+        $.ajax({
+            type: "POST",
+            url: "/ccn",
+            data: SendOver,
+            success: function (responseFromServer) {
+                console.log(responseFromServer);
+            }
+        });
+        console.log(SendOver)
+    }
 }
-
-// module.exports = router;
-

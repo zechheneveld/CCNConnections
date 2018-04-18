@@ -10,6 +10,8 @@ p {
     font-family: Palatino;
     color: rgb(0, 86, 149);
 }
+
+
 .background {
     background-repeat: no-repeat;
     z-index: -1000;
@@ -53,6 +55,8 @@ div#groupSelect.form-group.col-md-4{
 label{
     display: inline-block;
     vertical-align: text-top;
+    margin-left: 200px;
+    color: rgb(0, 86, 149);
 }
 label#group{
     margin: inherit;
@@ -68,13 +72,13 @@ label#message{
     font-family: Palatino;
     font-size: 15px;
     color: rgb(0, 86, 149);
-    margin: 0 180px 5px;
+    margin-left: 200px;
 }
 #password {
     font-family: Palatino;
     font-size: 15px;
     color: rgb(0, 86, 149);
-    margin: 0 180px 5px;
+    margin-left: 200px;
 }
 #fname {
     font-family: Palatino;
@@ -237,65 +241,7 @@ footer{
     margin: 0 auto;
     width: 15%;
 }
-.button26 {
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    position: relative;
-    border: 1px solid rgba(255,255,255,0.5);
-    overflow: hidden;
-    width: 100%;
-    background-color: #4cae4c;
-    color: white;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-    cursor: pointer;
-    text-decoration: none;
-}
-.button26 a{
-    color: rgba(51,51,51,1);
-    text-decoration: none;
-    display: block;
-}
-.button26::before, .button26::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    opacity: 1;
-    -webkit-transform: translate(-13%,-190%) rotate(-30deg);
-    transform: translate(-13%,-190%) rotate(-30deg);
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgba(255,255,255,1);
-    background-color: rgba(255,255,255,0.25);
-}
-.button26::after{
-    -webkit-transition-delay: 0.2s; /* Safari */
-    transition-delay: 0.2s;
-}
-.button26:hover::before, .button26:hover::after{
-    opacity: 0;
-    -webkit-transform: translate(0,0);
-    transform: translate(0,0);
-}
-.button26:active{
-    background: #f06a7c;
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f06a7c), to(#f56c7e));
-    background: -moz-linear-gradient(#f06a7c, #f56c7e);
-    background: linear-gradient(#f06a7c, #f56c7e);
-    border: solid 1px #a14753;
-    box-shadow: inset 0 10px 15px 0 #d45d6d;
-}
+
 #grpSel {
     float: right;
 }
@@ -324,80 +270,79 @@ footer{
     bottom: 5px;
     right: 10px;
 }
-.btn.btn-success {
-    color: #ffffff;
-    background-color: #5CB85C;
-    background-image: linear-gradient(to bottom, #5CB85C, #419641);
-    border-color: #3E8F3E #3E8F3E #3E8F3E;
-    font-size: 16px;
-}
-.btn.btn-success:hover {
-    color: #ffffff;
-    background-color: #419641;
-    background-image: linear-gradient(to bottom, #419641, #419641);
-    border-color: #3E8F3E #3E8F3E #3E8F3E;
+
+#submitBtn {
+    width: auto;
+
 }
 
 * {
     font-family: 'Roboto', sans-serif;
 }
 
-button {
-    outline: none;
-    height: 40px;
-    text-align: center;
-    width: 130px;
-    border-radius: 40px;
-    background: rgb(0, 86, 149);
-    border: 2px solid white;
-    color: white;
-    letter-spacing: 1px;
-    text-shadow: 0;
-    font-size: 12px;
+/*button {*/
+    /*outline: none;*/
+    /*height: 40px;*/
+    /*text-align: center;*/
+    /*width: 130px;*/
+    /*border-radius: 40px;*/
+    /*background: rgb(0, 86, 149);*/
+    /*border: 2px solid white;*/
+    /*color: white;*/
+    /*letter-spacing: 1px;*/
+    /*text-shadow: 0;*/
+    /*font-size: 12px;*/
+    /*font-weight: bold;*/
+    /*cursor: pointer;*/
+    /*transition: all 0.25s ease;*/
+    /*display: block;*/
+    /*margin: 0 auto;*/
+/*}*/
+/*button:active {*/
+    /*letter-spacing: 2px;*/
+/*}*/
+/*button:after {*/
+    /*content: "Send";*/
+    /*font-size: 15px;*/
+/*}*/
+
+/*button:hover {*/
+    /*color: #ffcc00;*/
+/*}*/
+/*.onclic {*/
+    /*width: 40px;*/
+    /*border-color: white;*/
+    /*border-width: 3px;*/
+    /*font-size: 0;*/
+    /*border-left-color: #ffcc00;*/
+    /*animation: rotating 2s 0.25s linear;*/
+/*}*/
+/*.onclic:after {*/
+    /*content: "";*/
+/*}*/
+
+/*.validate {*/
+    /*font-size: 13px;*/
+    /*color: #ffcc00;*/
+    /*background: rgb(0, 86, 149);*/
+/*}*/
+/*.validate:after {*/
+    /*font-family: 'FontAwesome';*/
+    /*content: "\f00c";*/
+    /*font-size: 20px;*/
+/*}*/
+/*@keyframes rotating {*/
+    /*from {*/
+        /*transform: rotate(0deg);*/
+    /*}*/
+    /*to {*/
+        /*transform: rotate(360deg);*/
+    /*}*/
+/*}*/
+
+#modalTitle {
+    font-family: Palatino;
+    color: rgb(0, 86, 149);
     font-weight: bold;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    display: block;
-    margin: 0 auto;
-}
-button:active {
-    letter-spacing: 2px;
-}
-button:after {
-    content: "Send";
-    font-size: 15px;
-}
-
-button:hover {
-    color: #ffcc00;;
-}
-.onclic {
-    width: 40px;
-    border-color: white;
-    border-width: 3px;
-    font-size: 0;
-    border-left-color: #ffcc00;
-    animation: rotating 2s 0.25s linear;
-}
-.onclic:after {
-    content: "";
-}
-
-.validate {
-    font-size: 13px;
-    color: #ffcc00;
-    background: rgb(0, 86, 149);
-}
-.validate:after {
-    font-family: 'FontAwesome';
-    content: "\f00c";
-    font-size: 20px;
-}
-@keyframes rotating {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+    font-size: 30px;
 }
