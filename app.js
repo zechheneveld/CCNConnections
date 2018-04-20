@@ -15,6 +15,14 @@ var bootbox = require('bootbox');
 mongoose.connect('mongodb://localhost/loginapp');
 var db = mongoose.connection;
 
+db.once('open', function () {
+    console.log('Connected to MongoDB');
+});
+
+db.on('error', function (err) {
+    console.log(err);
+});
+
 // var client = require('./public/js/client');
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -83,7 +91,6 @@ app.use(function (req, res, next) {
 
 app.use('/users', users);
 app.use('/contacts', contacts);
-// app.use('/client', client);
 app.use('/ccn', ccn);
 app.use('/', routes);
 

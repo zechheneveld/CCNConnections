@@ -39,7 +39,6 @@ router.post('/contact', function(req, res){
 
         Contact.createContact(newContact, function(err, contact){
             if(err) throw err;
-            console.log(contact);
         });
 
         req.flash('success_msg', 'Number registered and can now be used');

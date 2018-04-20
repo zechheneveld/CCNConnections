@@ -296,8 +296,17 @@ footer{
 }
 
 #submitBtn {
+    width: 100%;
+    font-family: SansSerif;
+    border: none;
+    padding: 10px;
+}
+
+#loginBtn{
     width: 20%;
     font-family: SansSerif;
+    border: none;
+    padding: 10px;
 }
 
 #addContactBtn{
@@ -489,4 +498,17 @@ footer{
 strong{
     font-weight: bold;
     padding: 10px;
+}
+
+#registerInput{
+    width: 50%;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: SansSerif;
+}
+
+#registerInput:focus{
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }

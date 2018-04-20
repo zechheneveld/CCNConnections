@@ -13,40 +13,57 @@ router.get('/contact', function(req, res){
 var numbers;
 var addedNumbers = [];
 var message;
+
+
+module.exports.getAll = function(callback){
+    var query1 = {group: "Families"};
+    db.db('mydb').collection("Families").find(query1).toArray(function (err, result) {
+        if (err) throw err;
+        console.log("result " + result);
+        db.close();
+    });
+    Contact.find({}, callback);
+};
+
+module.exports.createContact = function(newContact, callback) {
+    console.log("test ccn " + newContact);
+};
+
 // //Message
 router.post('/', function (req, res, next) {
     res.send({messageFromServer: 'Got message!'});
     message = req.body.message;
-    if (req.body.number != '1'){
+    // addedNumbers.push(req.body.number);
+    //
+    if (req.body.number != null){
         addedNumbers.push(req.body.number);
+        addedNumbers.push(req.body.group);
+        var errors = req.validationErrors();
+        if(errors){
+            res.render('contact',{
+                errors:errors
+            });
+        } else {
+            var newContact = new Contact({
+                number:req.body.number,
+                group: req.body.group
+            });
+            Contact.createContact(newContact, function(err, contact){
+                if(err) throw err;
+                console.log(contact);
+            });
+            req.flash('success_msg', 'Number added');
+        }
     } else {
         console.log("no number")
-    }
-    var errors = req.validationErrors();
-    if(errors){
-        res.render('contact',{
-            errors:errors
-        });
-    } else {
-        var newContact = new Contact({
-            number:addedNumbers
-        });
-        Contact.createContact(newContact, function(err, contact){
-            if(err) throw err;
-            console.log(contact);
-        });
-        req.flash('success_msg', 'Number registered and can now be used');
-        // res.redirect('/');
     }
     const twilio = require('twilio')(
         process.env.TWILIO_ACCOUNT_SID,
         process.env.TWILIO_AUTH_TOKEN,
         process.env.TWILIO_MESSAGING_SERVICE_SID
     );
-    const body = 'both working';
     if (message != '') {
         numbers = addedNumbers;
-        // ['15189323461', '16027906734', '17143922107', '15309493838', '14803041092','15189323461'];
         Promise.all(
             numbers.map(numbers => {
                 return twilio.messages.create({
@@ -58,11 +75,13 @@ router.post('/', function (req, res, next) {
         )
             .then(messages => {
                 console.log('Messages sent!');
+                req.flash('success', 'Message Sent');
             })
             .catch(err => console.error(err));
     } else {
-        req.flash('success', 'Contact Updated');
-        console.log("number added")
+        req.flash('success', 'Contact added');
+        console.log("number added");
+        return null;
     }
 });
 router.get('/', function (req, res, next) {

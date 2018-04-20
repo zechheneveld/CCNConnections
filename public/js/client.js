@@ -1,36 +1,83 @@
 console.log("Client loaded");
-var SendOver;
+var sendNumber1;
+var sendMessage1;
+var groupSelected;
 $(document).ready(function () {
     init();
 });
 function init() {
+
+    $("#family").on('click', function (e) {
+        e.preventDefault();
+        groupSelected = "Families";
+    });
+
+
+    $("#volunteer").on('click', function (e) {
+        e.preventDefault();
+        groupSelected = "Volunteers"
+    });
+
+
+
     $("#btnAdd").on("click", function (e) {
         e.preventDefault();
-        SendOver = {
-            number: "1" + $("#txtClient1").val(),
-            message: ""
+
+        sendNumber1 = {
+            number: $("#txtClient1").val(),
+            group: groupSelected
         };
+
         $("#txtClient1").val("");
-        SendInfo();
+        sendNumber();
     });
     $("#messageSend").on("click", function (e) {
         e.preventDefault();
-        SendOver = {
-            number: "1",
+
+        sendMessage1 = {
             message: $("#form_message").val()
         };
+
         $("#form_message").val("");
-        SendInfo();
+        sendMessage();
     });
-    function SendInfo() {
-        $.ajax({
-            type: "POST",
-            url: "/ccn",
-            data: SendOver,
-            success: function (responseFromServer) {
-                console.log(responseFromServer);
-            }
-        });
-        console.log(SendOver)
-    }
+}
+function sendMessage() {
+    $.ajax({
+        type: "POST",
+        url: "/ccn",
+        data: sendMessage1,
+        success: function (responseFromServer) {
+            console.log(responseFromServer);
+        }
+    });
+    console.log(sendMessage1);
+
+    $.ajax({
+        type: "GET",
+        url: "/contacts/contact",
+        success: function(response){
+            // console.log(response);
+        }
+    });
+}
+
+function sendNumber() {
+    $.ajax({
+        type: "POST",
+        url: "/ccn",
+        data: sendNumber1,
+        success: function (responseFromServer) {
+            console.log(responseFromServer);
+        }
+    });
+    console.log(sendNumber1);
+
+    $.ajax({
+        type: "GET",
+        url: "/contacts/contact",
+        success: function (response) {
+            // console.log(response);
+        }
+    });
 }
