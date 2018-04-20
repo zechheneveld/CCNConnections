@@ -7,8 +7,26 @@ body {
 }
 p {
     text-align: center;
-    font-family: Palatino;
+    font-family: SansSerif;
     color: rgb(0, 86, 149);
+}
+
+a{
+    font-family: SansSerif;
+}
+
+.h4{
+    font-family: SansSerif;
+    font-size: 20px;
+}
+
+.h2{
+    font-family: SansSerif;
+    font-size: 20px;
+}
+
+option{
+    font-family: SansSerif;
 }
 
 
@@ -57,85 +75,88 @@ label{
     vertical-align: text-top;
     margin-left: 200px;
     color: rgb(0, 86, 149);
+    font-family: SansSerif;
 }
 label#group{
     margin: inherit;
     display: table-cell;
-    padding-left: 45px;
+    padding-left: 50px;
+    font-family: SansSerif;
 }
 label#message{
     display: table-cell;
     margin: inherit;
     padding-left: 100px;
+    font-family: SansSerif;
 }
 #username {
-    font-family: Palatino;
+    font-family: SansSerif;
     font-size: 15px;
     color: rgb(0, 86, 149);
     margin-left: 200px;
 }
 #password {
-    font-family: Palatino;
+    font-family: SansSerif;
     font-size: 15px;
     color: rgb(0, 86, 149);
     margin-left: 200px;
 }
 #fname {
-    font-family: Palatino;
+    font-family: SansSerif;
     font-size: 15px;
     color: rgb(0, 86, 149);
     margin: 0 180px 5px;
 }
 #usrname {
-    font-family: Palatino;
+    font-family: SansSerif;
     font-size: 15px;
     color: rgb(0, 86, 149);
     margin: 0 180px 5px;
 }
 #email {
-    font-family: Palatino;
+    font-family: SansSerif;
     font-size: 15px;
     color: rgb(0, 86, 149);
     margin: 0 180px 5px;
 }
 #pw {
-    font-family: Palatino;
+    font-family: SansSerif;
     font-size: 15px;
     color: rgb(0, 86, 149);
     margin: 0 180px 5px;
 }
 #cpw{
-    font-family: Palatino;
+    font-family: SansSerif;
     font-size: 15px;
     color: rgb(0, 86, 149);
     margin: 0 180px 5px;
 }
 #groupname{
-    font-family: Palatino;
+    font-family: SansSerif;
     font-size: 15px;
     color: rgb(0, 86, 149);
     margin: 0 180px 5px;
 }
 #phonenumber{
-    font-family: Palatino;
+    font-family: SansSerif;
     font-size: 15px;
     color: rgb(0, 86, 149);
     margin: 0 180px 5px;
 }
 #group{
-    font-family: Palatino;
+    font-family: SansSerif;
     font-size: 15px;
     color: rgb(0, 86, 149);
     margin: 0 180px 5px;
 }
 #message{
-    font-family: Palatino;
+    font-family: SansSerif;
     font-size: 15px;
     color: rgb(0, 86, 149);
     margin: 0 180px 5px;
 }
 li a:hover {
-    color: rgb(0, 86, 149);
+    color: #87ceeb
 }
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -225,13 +246,13 @@ li a:hover {
 .page-header{
     margin-top:0;
     text-align: center;
-    font-family: Palatino;
+    font-family: SansSerif;
     color: rgb(0, 86, 149);
 }
 .dashboardHead {
     margin-bottom:0;
     text-align: center;
-    font-family: Palatino;
+    font-family: SansSerif;
     color: rgb(0, 86, 149);
 }
 footer{
@@ -251,16 +272,19 @@ footer{
     position: relative;
     resize: none;
     margin: 0 auto;
+    padding: 20px;
+    font-family: SansSerif;
 }
 #inputState {
     width: 75%;
-    height: 30px;
     position: relative;
     resize: none;
     margin: 0 auto;
+    font-family: SansSerif;
+    font-size: 14px;
 }
 #groupSelect {
-    font-family: Palatino;
+    font-family: SansSerif;
     font-size: 15px;
     color: rgb(0, 86, 149);
     margin: 0 180px 5px;
@@ -272,8 +296,15 @@ footer{
 }
 
 #submitBtn {
-    width: auto;
+    width: 20%;
+    font-family: SansSerif;
+}
 
+#addContactBtn{
+    border: none;
+    font-size: 12px;
+    font-family: sans-serif;
+    padding: 12px;
 }
 
 * {
@@ -341,8 +372,121 @@ footer{
 /*}*/
 
 #modalTitle {
-    font-family: Palatino;
+    font-family: SansSerif;
     color: rgb(0, 86, 149);
     font-weight: bold;
     font-size: 30px;
+}
+
+#usernameInput{
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+    font-size: 12px;
+}
+
+#usernameInput:focus{
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+#passwordInput{
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+    font-size: 12px;
+}
+
+#passwordInput:focus{
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.deep-blue-gradient {
+    background-image: linear-gradient(120deg, #87ceeb 0%, #005695 100%);
+}
+
+.form-header{
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 2px;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: -50px;
+    margin-bottom: 50px;
+}
+
+.rounded{
+    border-radius: .25rem!important;
+}
+
+.mx-xl-5{
+    margin-left: 3rem!important;
+    margin-right: 3rem!important;
+    padding: 20px;
+}
+
+.card{
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: rgba(255,255,255,.5);
+    background-clip: border-box;
+}
+
+#messageSend{
+    border: none;
+    padding: 12px;
+    font-family: sans-serif;
+}
+
+.form-control:focus{
+    background: #ffffff;
+}
+
+#txtClient1{
+    background: #ffffff;
+    width: 70%;
+    border: .5px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    font-size: 14px;
+    font-family: SansSerif;
+}
+
+#btnAdd{
+    border: none;
+    font-size: 14px;
+    padding: 12px;
+}
+
+#btnCancel{
+    border: none;
+    font-size: 12px;
+    padding: 12px;
+    float: left;
+}
+
+.alert{
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 30%;
+    float: right;
+    overflow: hidden;
+    margin: 0;
+}
+
+.modal-footer{
+    text-align: left;
+}
+
+strong{
+    font-weight: bold;
+    padding: 10px;
 }

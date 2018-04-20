@@ -1,5 +1,4 @@
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="font-size: 15px">Add Contact</button>
-
+<button type="button" id="addContactBtn" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#myModal">Add Contact</button>
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -20,13 +19,24 @@
                 </select>
             </div>
             <div class="modal-footer">
-                <button id="btnAdd" type="button" class="btn btn-success" data-dismiss="modal">Add</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove" style="padding-top: 2px;"></span>Cancel</button>
+                <button id="btnAdd" type="button" class="btn btn-success">Add</button>
+                <div class="alert alert-success fade">
+                    <strong><span class="glyphicon glyphicon-ok"></span></strong> Contact Added
+                </div>
+                <button id="btnCancel" type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>Close</button>
             </div>
         </div>
 
     </div>
 </div>
+
+<script>
+    $("#btnAdd").on("click", function() {
+        $(".alert").removeClass("in").show();
+        $(".alert").delay(200).addClass("in").fadeOut(2000);
+    });
+
+</script>
 
 
 <div id="groupSelect" class="form-group col-md-4">
@@ -47,7 +57,7 @@
 </div>
 
 <div id="sendBtn">
-    <button id="messageSend" class="btn btn-success">Send</button>
+    <button id="messageSend" class="btn btn-success"><i class="glyphicon glyphicon-send"></i>Send</button>
 </div>
 
     <!--<button id="button"></button>-->
