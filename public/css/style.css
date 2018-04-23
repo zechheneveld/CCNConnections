@@ -3,33 +3,27 @@ body {
     padding-bottom: 20px;
 }
 .backgroundImage{
-    padding-bottom: 50px;
+    padding-bottom: 25px;
 }
 p {
     text-align: center;
     font-family: SansSerif;
     color: rgb(0, 86, 149);
 }
-
 a{
     font-family: SansSerif;
 }
-
 .h4{
     font-family: SansSerif;
     font-size: 20px;
 }
-
 .h2{
     font-family: SansSerif;
     font-size: 20px;
 }
-
 option{
     font-family: SansSerif;
 }
-
-
 .background {
     background-repeat: no-repeat;
     z-index: -1000;
@@ -40,6 +34,7 @@ option{
     width: 25%;
     height: 25%;
     padding-top: 10px;
+    padding-left: 10px;
 }
 div.loginscreen{
     display: table-cell;
@@ -73,21 +68,24 @@ div#groupSelect.form-group.col-md-4{
 label{
     display: inline-block;
     vertical-align: text-top;
-    margin-left: 200px;
+    margin: 0 200px 5px;
     color: rgb(0, 86, 149);
     font-family: SansSerif;
 }
 label#group{
     margin: inherit;
     display: table-cell;
-    padding-left: 50px;
+    padding-left: 60px;
     font-family: SansSerif;
 }
 label#message{
     display: table-cell;
     margin: inherit;
-    padding-left: 100px;
+    padding-left: 110px;
     font-family: SansSerif;
+}
+input{
+    border: 3px solid black;
 }
 #username {
     font-family: SansSerif;
@@ -183,7 +181,7 @@ li a:hover {
     border-top: 1px solid #e5e5e5;
 }
 /* Customize container */
-@media (min-width: 768px) {
+@media (min-width: 320px) {
     .container{
         max-width: 800px;
         background: rgba(255, 255, 255, .5);
@@ -211,12 +209,13 @@ li a:hover {
     margin-top: 28px;
 }
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 320px) {
     /* Remove the padding we set earlier */
     #username,
     #inputState,
     #password,
     .form-group,
+    label.active,
     #form_message,
     #groupSelect,
     .loginscreen,
@@ -260,9 +259,8 @@ footer{
 }
 .submitButton {
     margin: 0 auto;
-    width: 15%;
+    width: 50%;
 }
-
 #grpSel {
     float: right;
 }
@@ -294,148 +292,139 @@ footer{
     bottom: 5px;
     right: 10px;
 }
-
 #submitBtn {
     width: 100%;
     font-family: SansSerif;
     border: none;
     padding: 10px;
 }
-
 #loginBtn{
-    width: 20%;
+    width: 50%;
     font-family: SansSerif;
     border: none;
     padding: 10px;
 }
-
 #addContactBtn{
     border: none;
     font-size: 12px;
     font-family: sans-serif;
     padding: 12px;
+    width: auto;
+    margin-bottom: 20px;
 }
-
 * {
     font-family: 'Roboto', sans-serif;
 }
-
 /*button {*/
-    /*outline: none;*/
-    /*height: 40px;*/
-    /*text-align: center;*/
-    /*width: 130px;*/
-    /*border-radius: 40px;*/
-    /*background: rgb(0, 86, 149);*/
-    /*border: 2px solid white;*/
-    /*color: white;*/
-    /*letter-spacing: 1px;*/
-    /*text-shadow: 0;*/
-    /*font-size: 12px;*/
-    /*font-weight: bold;*/
-    /*cursor: pointer;*/
-    /*transition: all 0.25s ease;*/
-    /*display: block;*/
-    /*margin: 0 auto;*/
+/*outline: none;*/
+/*height: 40px;*/
+/*text-align: center;*/
+/*width: 130px;*/
+/*border-radius: 40px;*/
+/*background: rgb(0, 86, 149);*/
+/*border: 2px solid white;*/
+/*color: white;*/
+/*letter-spacing: 1px;*/
+/*text-shadow: 0;*/
+/*font-size: 12px;*/
+/*font-weight: bold;*/
+/*cursor: pointer;*/
+/*transition: all 0.25s ease;*/
+/*display: block;*/
+/*margin: 0 auto;*/
 /*}*/
 /*button:active {*/
-    /*letter-spacing: 2px;*/
+/*letter-spacing: 2px;*/
 /*}*/
 /*button:after {*/
-    /*content: "Send";*/
-    /*font-size: 15px;*/
+/*content: "Send";*/
+/*font-size: 15px;*/
 /*}*/
-
 /*button:hover {*/
-    /*color: #ffcc00;*/
+/*color: #ffcc00;*/
 /*}*/
 /*.onclic {*/
-    /*width: 40px;*/
-    /*border-color: white;*/
-    /*border-width: 3px;*/
-    /*font-size: 0;*/
-    /*border-left-color: #ffcc00;*/
-    /*animation: rotating 2s 0.25s linear;*/
+/*width: 40px;*/
+/*border-color: white;*/
+/*border-width: 3px;*/
+/*font-size: 0;*/
+/*border-left-color: #ffcc00;*/
+/*animation: rotating 2s 0.25s linear;*/
 /*}*/
 /*.onclic:after {*/
-    /*content: "";*/
+/*content: "";*/
 /*}*/
-
 /*.validate {*/
-    /*font-size: 13px;*/
-    /*color: #ffcc00;*/
-    /*background: rgb(0, 86, 149);*/
+/*font-size: 13px;*/
+/*color: #ffcc00;*/
+/*background: rgb(0, 86, 149);*/
 /*}*/
 /*.validate:after {*/
-    /*font-family: 'FontAwesome';*/
-    /*content: "\f00c";*/
-    /*font-size: 20px;*/
+/*font-family: 'FontAwesome';*/
+/*content: "\f00c";*/
+/*font-size: 20px;*/
 /*}*/
 /*@keyframes rotating {*/
-    /*from {*/
-        /*transform: rotate(0deg);*/
-    /*}*/
-    /*to {*/
-        /*transform: rotate(360deg);*/
-    /*}*/
+/*from {*/
+/*transform: rotate(0deg);*/
 /*}*/
-
+/*to {*/
+/*transform: rotate(360deg);*/
+/*}*/
+/*}*/
 #modalTitle {
     font-family: SansSerif;
     color: rgb(0, 86, 149);
     font-weight: bold;
     font-size: 30px;
 }
-
+#registerTitle {
+    font-family: SansSerif;
+    color: rgb(0, 86, 149);
+    font-weight: bold;
+    font-size: 30px;
+}
 #usernameInput{
     background-color: white;
-    border: none;
+    /*border: none;*/
     border-radius: 5px;
     width: 50%;
     font-size: 12px;
 }
-
 #usernameInput:focus{
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
-
 #passwordInput{
     background-color: white;
-    border: none;
+    /*border: none;*/
     border-radius: 5px;
     width: 50%;
     font-size: 12px;
 }
-
 #passwordInput:focus{
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
-
 .deep-blue-gradient {
     background-image: linear-gradient(120deg, #87ceeb 0%, #005695 100%);
 }
-
 .form-header{
     color: #fff;
     text-align: center;
     padding: 1rem;
     border-radius: 2px;
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     margin-top: -50px;
     margin-bottom: 50px;
 }
-
 .rounded{
     border-radius: .25rem!important;
 }
-
 .mx-xl-5{
     margin-left: 3rem!important;
     margin-right: 3rem!important;
     padding: 20px;
 }
-
 .card{
     position: relative;
     display: flex;
@@ -447,17 +436,15 @@ footer{
     background-color: rgba(255,255,255,.5);
     background-clip: border-box;
 }
-
 #messageSend{
     border: none;
     padding: 12px;
     font-family: sans-serif;
+    width: auto;
 }
-
 .form-control:focus{
     background: #ffffff;
 }
-
 #txtClient1{
     background: #ffffff;
     width: 70%;
@@ -467,20 +454,17 @@ footer{
     font-size: 14px;
     font-family: SansSerif;
 }
-
 #btnAdd{
     border: none;
     font-size: 14px;
     padding: 12px;
 }
-
 #btnCancel{
     border: none;
     font-size: 12px;
     padding: 12px;
     float: left;
 }
-
 .alert{
     padding: 5px;
     border: 1px solid transparent;
@@ -490,25 +474,45 @@ footer{
     overflow: hidden;
     margin: 0;
 }
-
 .modal-footer{
     text-align: left;
 }
-
 strong{
     font-weight: bold;
     padding: 10px;
 }
-
 #registerInput{
     width: 50%;
     background-color: #ffffff;
-    border: none;
     border-radius: 5px;
     font-size: 12px;
     font-family: SansSerif;
 }
-
 #registerInput:focus{
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+#family{
+    border: none;
+    margin: 0 auto;
+    padding: 10px;
+    width: 20%;
+}
+
+#volunteer{
+    border: none;
+    margin-top: 20px;
+    width: 20%;
+    padding: 10px;
+    float: none;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+#donors{
+    width: 20%;
+}
+
+.groupBtns{
+    display: flex;
 }

@@ -10,6 +10,7 @@ function init() {
     $("#family").on('click', function (e) {
         e.preventDefault();
         groupSelected = "Families";
+        console.log(groupSelected);
     });
 
 
@@ -18,9 +19,13 @@ function init() {
         groupSelected = "Volunteers"
     });
 
+    $("#donors").on('click', function (e) {
+        e.preventDefault();
+        groupSelected = "Donors"
+    });
 
 
-    $("#btnAdd").on("click", function (e) {
+        $("#btnAdd").on("click", function (e) {
         e.preventDefault();
 
         sendNumber1 = {

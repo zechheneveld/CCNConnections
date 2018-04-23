@@ -1,4 +1,4 @@
-<button type="button" id="addContactBtn" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#myModal">Add Contact</button>
+<button type="button" id="addContactBtn" class="btn btn-blue waves-effect waves-light" data-toggle="modal" data-target="#myModal">Add Contact</button>
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -14,8 +14,11 @@
                 <p style="padding-top: 20px">Select Group:</p>
                 <!--<select id="inputState" class="form-control">-->
                     <!--<option selected>Choose...</option>-->
-                    <button class="btn btn-primary waves-effect " id="family">Families</button>
-                    <button class="btn btn-primary waves-effect" id="volunteer">Volunteers</button>
+                    <div class="groupBtns">
+                        <button class="btn btn-blue" id="family">Families</button>
+                        <button class="btn btn-blue" id="donors">Donors</button>
+                        <button class="btn btn-blue" id="volunteer">Volunteers</button>
+                    </div>
                 <!--</select>-->
             </div>
             <div class="modal-footer">
@@ -43,8 +46,9 @@
     <label id="group" for="inputState">Select Group:</label>
     <select id="inputState" class="form-control">
         <option selected>Choose...</option>
-        <option>Families</option>
-        <option>Volunteers</option>
+        <option value="Families" id="#family">Families</option>
+        <option value="Donors" id="#donors">Donors</option>
+        <option value="Volunteers" id="#volunteer">Volunteers</option>
     </select>
 </div>
 <div class="row">
@@ -57,5 +61,15 @@
 </div>
 
 <div id="sendBtn">
-    <button id="messageSend" class="btn btn-success"><i class="glyphicon glyphicon-send"></i>Send</button>
+    <button id="messageSend" class="btn btn-success"><i class="glyphicon glyphicon-send" style="padding-right: 5px;"></i>Send</button>
 </div>
+
+<script>
+    $(function() {
+        $("#messageSend").click( function()
+                {
+                    $(this).toggleClass('clicked');
+                }
+        );
+    });
+</script>
