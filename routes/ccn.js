@@ -13,6 +13,8 @@ router.get('/contact', function(req, res){
 var numbers;
 var addedNumbers = [];
 var message;
+var groupSend;
+var numberGroup;
 
 
 module.exports.getAll = function(callback){
@@ -33,11 +35,17 @@ module.exports.createContact = function(newContact, callback) {
 router.post('/', function (req, res, next) {
     res.send({messageFromServer: 'Got message!'});
     message = req.body.message;
-    // addedNumbers.push(req.body.number);
-    //
+    groupSend = req.body.groupSend;
+    console.log("groupSend " + req.body.groupSend);
     if (req.body.number != null){
-        addedNumbers.push(req.body.number);
-        addedNumbers.push(req.body.group);
+        addedNumbers.push(
+            req.body.number,
+            req.body.group
+        );
+    //     numberGroup = req.body.group;
+        console.log("addedNumbers: " + req.body.group);
+
+
         var errors = req.validationErrors();
         if(errors){
             res.render('contact',{
@@ -51,11 +59,13 @@ router.post('/', function (req, res, next) {
             Contact.createContact(newContact, function(err, contact){
                 if(err) throw err;
                 console.log(contact);
+                // addedNumbers.push(contact)
             });
             req.flash('success_msg', 'Number added');
         }
     } else {
-        console.log("no number")
+        console.log("no number");
+
     }
     const twilio = require('twilio')(
         process.env.TWILIO_ACCOUNT_SID,
@@ -63,26 +73,34 @@ router.post('/', function (req, res, next) {
         process.env.TWILIO_MESSAGING_SERVICE_SID
     );
     if (message != '') {
-        numbers = addedNumbers;
-        Promise.all(
-            numbers.map(numbers => {
-                return twilio.messages.create({
-                    to: numbers,
-                    from: process.env.TWILIO_MESSAGING_SERVICE_SID,
-                    body: message
-                });
-            })
-        )
+        //     console.log("if " + groupSend + " = " + addedNumbers.group[i]);
+        // if (groupSend == addedNumbers.group) {
+            numbers = addedNumbers;
+
+            Promise.all(
+                numbers.map(numbers => {
+                    return twilio.messages.create({
+                        to: numbers,
+                        from: process.env.TWILIO_MESSAGING_SERVICE_SID,
+                        body: message
+                    });
+                })
+            )
+
             .then(messages => {
                 console.log('Messages sent!');
                 req.flash('success', 'Message Sent');
             })
             .catch(err => console.error(err));
     } else {
-        req.flash('success', 'Contact added');
-        console.log("number added");
-        return null;
-    }
+            req.flash('success', 'Contact added');
+            console.log("number added");
+            return null;
+        }
+
+    // }else  {
+    //     return null;
+    // }
 });
 router.get('/', function (req, res, next) {
 });

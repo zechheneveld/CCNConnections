@@ -3,10 +3,10 @@ var bcrypt = require('bcryptjs');
 
 // Contact Schema
 const ContactSchema = mongoose.Schema({
-    // group: {
-    //     type: String,
-    //     required:true
-    // },
+    group: {
+        type: String,
+        required:true
+    },
     number: {
         type: String,
         required:true
@@ -16,12 +16,12 @@ const ContactSchema = mongoose.Schema({
 const Contact = module.exports = mongoose.model('/', ContactSchema);
 
 module.exports.createContact = function(newContact, callback){
-    bcrypt.genSalt(10, function(err, salt) {
-        bcrypt.hash(newContact.number, salt, function(err, hash) {
-            newContact.number = hash;
+    // bcrypt.genSalt(10, function(err, salt) {
+    //     bcrypt.hash(newContact.number, salt, function(err, hash) {
+    //         newContact.number = hash;
             newContact.save(callback);
-        });
-    });
+        // });
+    // });
 };
 
 // module.exports.getContactByGroup = function(group, callback){

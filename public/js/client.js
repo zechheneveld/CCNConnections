@@ -2,6 +2,7 @@ console.log("Client loaded");
 var sendNumber1;
 var sendMessage1;
 var groupSelected;
+var groupSend;
 $(document).ready(function () {
     init();
 });
@@ -16,16 +17,39 @@ function init() {
 
     $("#volunteer").on('click', function (e) {
         e.preventDefault();
-        groupSelected = "Volunteers"
+        groupSelected = "Volunteers";
+        console.log(groupSelected);
     });
 
     $("#donors").on('click', function (e) {
         e.preventDefault();
-        groupSelected = "Donors"
+        groupSelected = "Donors";
+        console.log(groupSelected);
+    });
+
+    $("#familyGroup").on('click', function (e) {
+        e.preventDefault();
+        groupSend = "Families";
+        console.log(groupSend);
     });
 
 
-        $("#btnAdd").on("click", function (e) {
+    $("#volunteerGroup").on('click', function (e) {
+        e.preventDefault();
+        groupSend = "Volunteers";
+        console.log(groupSend);
+    });
+
+    $("#donorGroup").on('click', function (e) {
+        e.preventDefault();
+        groupSend = "Donors";
+        console.log(groupSend);
+    });
+
+
+
+
+    $("#btnAdd").on("click", function (e) {
         e.preventDefault();
 
         sendNumber1 = {
@@ -40,7 +64,8 @@ function init() {
         e.preventDefault();
 
         sendMessage1 = {
-            message: $("#form_message").val()
+            message: $("#form_message").val(),
+            groupSend: groupSend
         };
 
         $("#form_message").val("");
