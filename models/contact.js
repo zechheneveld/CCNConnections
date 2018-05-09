@@ -13,7 +13,7 @@ const ContactSchema = mongoose.Schema({
     },
 });
 
-const Contact = module.exports = mongoose.model('/', ContactSchema);
+const Contact = module.exports = mongoose.model('Contacts', ContactSchema);
 
 module.exports.createContact = function(newContact, callback){
     // bcrypt.genSalt(10, function(err, salt) {
