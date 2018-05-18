@@ -3,8 +3,16 @@ var sendNumber1;
 var sendMessage1;
 var groupSelected;
 var groupSend;
+
 $(document).ready(function () {
     init();
+    $.ajax({
+        type: "GET",
+        url: "/contacts/contact",
+        success: function (response) {
+            console.log(response);
+        }
+    });
 });
 function init() {
 
@@ -83,13 +91,13 @@ function sendMessage() {
     });
     console.log(sendMessage1);
 
-    $.ajax({
-        type: "GET",
-        url: "/contacts/contact",
-        success: function(response){
-            // console.log(response);
-        }
-    });
+    // $.ajax({
+    //     type: "GET",
+    //     url: "/contacts/contact",
+    //     success: function(response){
+    //         // console.log(response);
+    //     }
+    // });
 }
 
 function sendNumber() {
@@ -103,11 +111,11 @@ function sendNumber() {
     });
     console.log(sendNumber1);
 
-    $.ajax({
-        type: "GET",
-        url: "/contacts/contact",
-        success: function (response) {
-            // console.log(response);
-        }
-    });
+    // $.ajax({
+    //     type: "GET",
+    //     url: "/contacts/contact",
+    //     success: function (response) {
+    //         console.log(response);
+    //     }
+    // });
 }

@@ -10,15 +10,10 @@ router.get('/contact', function(req, res){
     res.render('contact');
 });
 
-// // Login
-// router.get('/login', function(req, res){
-//     res.render('login');
-// });
-
 // Register Contact
-router.post('/contact', function(req, res){
-    var group = req.body.group;
-    var number = req.body.number;
+router.post('/contact', function(req, res) {
+    // var group = req.body.group;
+    // var number = req.body.number;
 
     // Validation
     req.checkBody('group', 'Group is required').notEmpty();
@@ -27,26 +22,34 @@ router.post('/contact', function(req, res){
 
     var errors = req.validationErrors();
 
-    if(errors){
-        res.render('contact',{
-            errors:errors
+    if (errors) {
+        res.render('contact', {
+            title: "Add Contact",
+            errors: errors
         });
     } else {
-        var newContact = new Contact({
-            group: group,
-            number:number
+        var contact = new Contact();
+        contact.group = req.body.group;
+        contact.number = req.body.number;
+
+        contact.save(function (err) {
+            if (err) {
+                console.log(err);
+                return;
+            } else {
+                req.flash('success_msg', 'Number registered');
+                res.redirect('/contacts/contact');
+            }
         });
-
-        Contact.createContact(newContact, function(err, contact){
-            if(err) throw err;
-        });
-
-        req.flash('success_msg', 'Number registered and can now be used');
-
-        res.redirect('/contacts/contact');
     }
 });
 
+router.get("/contact", function (req, res) {
+   Contact.getAll(function (data) {
+       res.send(data);
+       console.log(data)
+   })
+});
 
 
 module.exports = router;

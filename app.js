@@ -11,6 +11,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var bootbox = require('bootbox');
+var mocha = require('mocha');
 
 mongoose.connect('mongodb://localhost/loginapp');
 var db = mongoose.connection;
@@ -23,7 +24,7 @@ db.on('error', function (err) {
     console.log(err);
 });
 
-// var client = require('./public/js/client');
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var contacts = require('./routes/contacts');
@@ -52,6 +53,14 @@ app.use(session({
     resave: true
 }));
 
+//Express Message MiddleWare
+app.use(require('connect-flash')());
+app.use(function (req, res, next) {
+   res.locals.messages = require('express-messages')(req, res);
+   next();
+});
+
+
 // Passport init
 app.use(passport.initialize());
 app.use(passport.session());
@@ -76,6 +85,9 @@ app.use(expressValidator({
 
 // Connect Flash
 app.use(flash());
+
+// Connect Mocha
+// app.use(mocha());
 
 // Global Vars
 app.use(function (req, res, next) {
